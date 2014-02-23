@@ -1,0 +1,32 @@
+{
+  "name": "resume.thomasrandolph.info",
+  "version": "0.0.0",
+  "authors": [
+    "rockerest <admin@rockerest.com>"
+  ],
+  "description": "Tom Randolph's Resume",
+  "main": "js/app/resume/bootstrap.js",
+  "keywords": [
+    "resume",
+    "tom",
+    "thomas",
+    "randolph"
+  ],
+  "license": "MIT",
+  "homepage": "resume.thomasrandolph.info",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "jquery": "~2.1.0",
+    "require": "requirejs#~2.1.11",
+    "font-awesome": "~4.0.3"
+  }
+}
