@@ -13,4 +13,8 @@ h2{
     font-size: 2em;
 }
 
+.highlight{
+    color: $highlightText;
+}
+
 @import "../../../vendor/font-awesome/scss/font-awesome.scss";
