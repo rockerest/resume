@@ -11,7 +11,8 @@
 	// Add the ignore rules that Koala will not search them.
 	// e.g. ["*.json", "*.txt", "test", "path/libs"]
 	"ignores": [
-		"js/"
+		"js/",
+		"vendor/"
 	],
 
 	// Compile options of Sass.
@@ -38,10 +39,7 @@
 	],
 
 	// An array of filesystem paths or importers which should be searched for Sass templates imported with the @import directive.
-	"includePaths": [
-		"./styles/sass/partials",
-		"./styles/sass/mixins"
-	],
+	"includePaths": [],
 
 	// A array of ruby libraries, require them before running Sass.
 	"requireLibs": []

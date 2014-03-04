@@ -1,14 +1,4 @@
-/* setup */
-@import "partials/reset";
-@import "partials/colors";
-@import "partials/typography";
-
-/* mixins */
-@import "mixins/border-radius";
-
-/* default styles */
-@import "partials/defaults";
-
-/* Page Elements */
-@import "partials/headers";
-@import "partials/sections";
+@import "variables/base";
+@import "mixins/base";
+@import "global/base";
+@import "layout/base";
