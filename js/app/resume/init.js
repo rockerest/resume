@@ -1,14 +1,16 @@
 define(
-    ["jquery"],
-    function( $ ){
+    ["jquery", "ui"],
+    function( $, Ui ){
         var Init = {};
+
+        Ui = new Ui();
 
         Init.startApp = function(){
             $(function(){
-                console.log( "Started" );
+                Ui.init();
             });
         };
 
         return Init;
     }
-)
+);
