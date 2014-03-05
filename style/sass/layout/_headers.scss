@@ -8,4 +8,11 @@ header{
     h1, h2, h3, h4, h5, h6{
         text-align: center;
     }
+
+    img{
+        @include border-radius( 0.25em );
+
+        float: left;
+        margin: auto -6em auto 6em;
+    }
 }

@@ -7,6 +7,10 @@ section{
 
     @include border-radius( 0.4em );
 
+    > h1{
+        text-align: left;
+    }
+
     h1 + hr{
         margin: -1em 0 1em;
     }
