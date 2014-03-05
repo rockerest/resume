@@ -136,3 +136,13 @@ body{
     background-color: $mainBackground;
     color: $readingText;
 }
+
+.clear:before,
+.clear:after{
+    content: " ";
+    display: table;
+}
+
+.clear:after{
+    clear: both;
+}
