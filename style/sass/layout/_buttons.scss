@@ -1,0 +1,12 @@
+button{
+    @include border-radius( 2px );
+    @include no-focus-outline();
+
+    border: 1px solid $struts;
+    padding: 0.3em 0.5em;
+    outline: none;
+
+    &.expand{
+        width: 100%;
+    }
+}
