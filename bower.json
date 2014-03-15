@@ -27,6 +27,7 @@
     "underscore": "~1.6.0",
     "jquery": "~2.1.0",
     "require": "requirejs#~2.1.11",
-    "font-awesome": "~4.0.3"
+    "font-awesome": "~4.0.3",
+    "moment": "~2.5.1"
   }
 }
