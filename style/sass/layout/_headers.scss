@@ -1,0 +1,27 @@
+header{
+    background-color: $highlightBackground;
+    padding: 1em;
+    margin: 1.5em auto auto;
+
+    @include border-radius( 1em );
+
+    h1, h2, h3, h4, h5, h6{
+        text-align: center;
+    }
+
+    img{
+        @include border-radius( 0.25em );
+
+        float: left;
+        margin: auto -6em auto 6em;
+    }
+}
+
+h3 + h4{
+    text-align: center;
+}
+
+h4{
+    text-align: left;
+    cursor: pointer;
+}
