@@ -32,7 +32,7 @@ define(
         };
 
         Ui.prototype.bind = function(){
-            $( ".work-item h4" ).on( "click", function(){
+            $( ".work-item h4, .volunteer-item h4" ).on( "click", function(){
                 $(this).siblings().slideToggle();
             });
 
