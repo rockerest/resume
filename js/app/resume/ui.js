@@ -2,13 +2,16 @@ define(
     ["jquery", "underscore", "moment"],
     function( $, _, moment ){
         var Ui = function(){},
+            hasStyles = !$( "#calibration" ).is( ":visible" ),
             toggleElement, unpackExpandables, repackExpandables,
             hideOldWork;
 
         Ui.prototype.init = function(){
-            this.addInteractives();
-            this.startup();
-            this.bind();
+            if( hasStyles ){
+                this.addInteractives();
+                this.startup();
+                this.bind();
+            }
         };
 
         Ui.prototype.addInteractives = function(){
