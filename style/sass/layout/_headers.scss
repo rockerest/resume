@@ -16,3 +16,12 @@ header{
         margin: auto -6em auto 6em;
     }
 }
+
+h3 + h4{
+    text-align: center;
+}
+
+h4{
+    text-align: left;
+    cursor: pointer;
+}
