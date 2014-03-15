@@ -1,21 +1,46 @@
 define(
-    ["jquery", "underscore"],
-    function( $, _ ){
+    ["jquery", "underscore", "moment"],
+    function( $, _, moment ){
         var Ui = function(){},
-            toggleElement, unpackExpandables, repackExpandables;
+            toggleElement, unpackExpandables, repackExpandables,
+            hideOldWork;
 
         Ui.prototype.init = function(){
+            this.addInteractives();
             this.startup();
-
             this.bind();
+        };
+
+        Ui.prototype.addInteractives = function(){
+            var buttonExpand = $( "<button></button>" )
+                                    .addClass( "expand" )
+                                    .append(
+                                        $( "<i></i>" ).addClass( "fa fa-expand" )
+                                    )
+                                    .append( "&nbsp;&nbsp;More about this..." ),
+                infoCircle = $( "<i></i>" ).addClass( "fa fa-info-circle" );
+
+            $( "div.expandables" ).before( buttonExpand );
+            $( "div.info" ).before( infoCircle.before( "&nbsp;&nbsp;" ) );
         };
 
         Ui.prototype.startup = function(){
             $( ".more" ).hide();
             $( ".expandables" ).hide();
+            $( ".info" ).hide();
+            hideOldWork();
         };
 
         Ui.prototype.bind = function(){
+            $( ".work-item h4" ).on( "click", function(){
+                $(this).siblings().slideToggle();
+            });
+
+            $( ".fa-info-circle" ).on( "click", function(){
+                $(this).siblings( ".info" ).slideToggle();
+                return false;
+            });
+
             $( ".more" ).parent().on({
                 "click": function(){
                     toggleElement( $(".more", this) );
@@ -64,6 +89,20 @@ define(
                         .toggleClass( "fa-expand fa-compress" );
 
                     e.stopPropagation();
+                }
+            });
+        };
+
+        hideOldWork = function(){
+            var now = new moment(),
+                oldest = now.subtract( "years", 5 ),
+                endTime;
+
+            $( "div.work-item" ).each( function( i, el ){
+                endTime = $(el).data( "end" ) ? moment( $(el).data( "end" ) ) : moment();
+
+                if( !endTime.isAfter( oldest ) ){
+                    $(el).children().not("h4").hide();
                 }
             });
         };
