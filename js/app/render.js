@@ -7,8 +7,8 @@ define(
             this.template = this.finalContent = this.container = this.jQXhr = undefined;
 
             if( templatePath ){
-                var tmpl = tmplStor.get( templatePath ),
-                    bust = "?_=" + (new Date()).getTime();
+                var tmpl = tmplStor.get( templatePath );
+                    //bust = "?_=" + (new Date()).getTime();
 
                 if( tmpl ){
                     self.jQXhr = this.promise( tmpl ).done( function( content ){
@@ -16,7 +16,7 @@ define(
                     });
                 }
                 else{
-                    self.jQXhr = $.get( templatePath + bust, function( content ){
+                    self.jQXhr = $.get( templatePath/* + bust*/, function( content ){
                         self.template = _.template( content );
                         tmplStor.set( templatePath, self.template );
                     });
