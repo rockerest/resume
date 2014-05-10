@@ -3,7 +3,7 @@ define(
     function( $, moment ){
         var MainBinding = {},
             hasStyles = !$( "#calibration" ).is( ":visible" ),
-            addInteractives, startup, bind,
+            addStyleWarning, addInteractives, startup, bind,
             toggleElement, unpackExpandables, repackExpandables,
             hideOldWork;
 
@@ -13,6 +13,13 @@ define(
                 startup();
                 bind();
             }
+            else{
+                addStyleWarning();
+            }
+        };
+
+        addStyleWarning = function(){
+            $( "body" ).prepend( "<h1>It looks like the style for this site failed to load, or you have CSS turned off.</h1><h2>All the content is below, as readable as possible but... I mean... It kinda looks like poo, don't you think?</h2>" );
         };
 
         addInteractives = function(){
