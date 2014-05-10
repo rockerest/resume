@@ -2,11 +2,18 @@
 <html>
     <head>
         <title>Thomas O. Randolph :: Javascript Developer</title>
-        <script type="text/javascript" data-main="js/app/bootstrap" src="vendor/require/require.js"></script>
+
         <link rel="stylesheet" type="text/css" href="style/screen.min.css" />
+
+        <script type="text/javascript" data-main="js/app/bootstrap" src="vendor/require/require.js"></script>
     </head>
     <body>
-        <i class="fa fa-spinner fa-spin fa-5x"></i>
+        <div id="preload" class="spinner-box" style="display: none;">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        <script type="text/javascript">
+            document.getElementById( "preload" ).removeAttribute( "style" );
+        </script>
         <noscript>
             <section class="issue">
                 <h1>Oh dear!</h1>
@@ -17,9 +24,9 @@
                 </p>
                 <hr />
                 <p>
-                    While you <strong>can</strong> still use this site without Javascript, you're really missing out.
+                    Unfortunately, this site requires Javascript to be enabled in order to work correctly.
                     <br />
-                    (Plus the internet has more to offer you, too!).
+                    (Plus the internet has more to offer you with Javascript, too!).
                     <br />
                     If you'd like, you could visit <a href="http://enable-javascript.com">enable-javascript.com</a> to learn how to enable Javascript in your browser.
                 </p>
