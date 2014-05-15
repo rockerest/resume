@@ -1,5 +1,5 @@
 requirejs.config({
-    //"urlArgs": "_=" + (new Date()).getTime(),
+    "urlArgs": "_=" + (new Date()).getTime(),
     "paths":{
         "lib":          "../../vendor",
 
@@ -7,7 +7,8 @@ requirejs.config({
         "sammy":        "../../vendor/sammy/lib/sammy",
         "underscore":   "../../vendor/underscore/underscore",
         "moment":       "../../vendor/moment/min/moment.min",
-        "cookies":      "../../vendor/cookies/src/cookies.min"
+        "cookies":      "../../vendor/cookies/src/cookies.min",
+        "intro":        "../../vendor/intro/minified/intro.min"
     },
     "shim":{
         "sammy":{

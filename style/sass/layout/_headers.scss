@@ -26,3 +26,23 @@ h4{
     text-align: left;
     cursor: pointer;
 }
+
+#startIntro{
+    @include border-radius( 0.25em );
+    background-color: $readingBackground;
+
+    cursor: pointer;
+
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 -0.5em -1.5em 0;
+    float: right;
+
+    line-height: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+
+    i{
+        font-size: 0.6em;
+    }
+}
