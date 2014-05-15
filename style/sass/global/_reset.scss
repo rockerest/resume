@@ -121,9 +121,9 @@ table{
 }
 
 /* apply a natural box layout model to all elements */
-*,
-*:before,
-*:after{
+article *,
+article *:before,
+article *:after{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
