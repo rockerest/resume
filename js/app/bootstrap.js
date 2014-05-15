@@ -1,5 +1,5 @@
 requirejs.config({
-    //"urlArgs": "_=" + (new Date()).getTime(),
+    "urlArgs": "_=" + (new Date()).getTime(),
     "paths":{
         "lib":          "../../vendor",
 

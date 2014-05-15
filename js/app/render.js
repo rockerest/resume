@@ -3,11 +3,13 @@ define(
     function( $, _, Async, TemplateStorage ){
         var Render = function( templatePath ){
             var self = this,
-                tmplStor = new TemplateStorage();
+                tmplStor = new TemplateStorage(),
+                path = templatePath + "?_=" + (new Date()).getTime();
+
             this.template = this.finalContent = this.container = this.jQXhr = undefined;
 
-            if( templatePath ){
-                var tmpl = tmplStor.get( templatePath );
+            if( path ){
+                var tmpl = tmplStor.get( path );
 
                 if( tmpl ){
                     self.jQXhr = this.promise( tmpl ).done( function( content ){
@@ -15,9 +17,9 @@ define(
                     });
                 }
                 else{
-                    self.jQXhr = $.get( templatePath, function( content ){
+                    self.jQXhr = $.get( path, function( content ){
                         self.template = _.template( content );
-                        tmplStor.set( templatePath, self.template );
+                        tmplStor.set( path, self.template );
                     });
                 }
             }
