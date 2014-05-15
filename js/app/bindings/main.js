@@ -87,10 +87,10 @@ define(
                 "click": function(){
                     intro.start();
                 },
-                "mouseenter": function(){
+                "mouseover": function(){
                     $("i", this).addClass( "fa-spin" );
                 },
-                "mouseleave": function(){
+                "mouseout": function(){
                     $("i", this).removeClass( "fa-spin" );
                 }
             });
