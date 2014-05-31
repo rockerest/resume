@@ -2,3 +2,4 @@ vendor*
 style/*.css
 node_modules*
 js/build*
+index.html
