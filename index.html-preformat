@@ -5,7 +5,7 @@
 
         <link rel="stylesheet" type="text/css" href="style/screen.min.css" />
 
-        <script type="text/javascript" data-main="js/app/bootstrap" src="vendor/require/require.js"></script>
+        <script type="text/javascript" data-main="js/build/@@application-main@@" src="vendor/require/require.js"></script>
     </head>
     <body>
         <div id="preload" class="spinner-box" style="display: none;">
