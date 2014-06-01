@@ -44,17 +44,17 @@ module.exports = function( grunt ){
                 ]
             },
             "vendor": {
-            	"files": [
-            		{
-            			"expand": true, 
-			            "cwd": 'vendor/intro/', 
-			            "src": ['*.css'], 
-			            "dest": 'style/sass/external/intro/', 
-			            "rename": function(dest, src) {
-			            	return dest + "_" + src.substring(0, src.indexOf('.css')) + '.scss';
-			            }
-            		}
-            	]
+                "files": [
+                    {
+                        "expand": true,
+                        "cwd": 'vendor/intro/',
+                        "src": ['*.css'],
+                        "dest": 'style/sass/external/intro/',
+                        "rename": function(dest, src) {
+                            return dest + "_" + src.substring(0, src.indexOf('.css')) + '.scss';
+                        }
+                    }
+                ]
             }
         },
         "replace": {
@@ -80,11 +80,11 @@ module.exports = function( grunt ){
             }
         },
         "cssmin": {
-        	"default": {
-        		"files": {
-			    	'style/screen.min.css': ['style/screen.css']
-			    }
-        	}
+            "default": {
+                "files": {
+                    'style/screen.min.css': ['style/screen.css']
+                }
+            }
         },
         "watch": {
             "scripts": {
@@ -92,13 +92,13 @@ module.exports = function( grunt ){
                 "tasks": ['build']
             }
         }
-	});
+    });
 
 	// manual tasks
 	grunt.registerTask( 'clean', "Wipe the build directory", function(){
 		grunt.file.delete( "./js/build" );
         grunt.file.mkdir( "./js/build" );
-	});
+    });
 
 	grunt.registerTask( 'prepare', "Prepare directory structure for anything necessary", function(){
         grunt.task.run( ['clean'] );
@@ -122,9 +122,9 @@ module.exports = function( grunt ){
     grunt.registerTask( 'setup', ['prepare', 'bower:install'] );
 
     grunt.registerTask( 'build', [
-    	'copy',
-    	'replace:dev-root',
-    	'sass:compile',
-    	'cssmin'
+        'copy',
+        'replace:dev-root',
+        'sass:compile',
+        'cssmin'
     ]);
 };
