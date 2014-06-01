@@ -1,5 +1,6 @@
 vendor*
 style/*.css
 node_modules*
+.sass-cache*
 js/build*
 index.html
