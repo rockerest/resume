@@ -30,8 +30,17 @@
     "jquery": "~2.1.1",
     "font-awesome": "~4.1.0",
     "moment": "~2.5.1",
-    "cookies-js": "~0.3.1",
     "cookies": "cookies-js#~0.3.1",
     "intro": "intro.js#~0.8.0"
+  },
+  "exportsOverride": {
+    "font-awesome": {
+      "scss": "scss/*.scss",
+      "fonts": "fonts/*"
+    },
+    "intro": {
+      "minified": "minified/*",
+      ".": "intro*"
+    }
   }
 }
