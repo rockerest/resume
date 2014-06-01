@@ -81,7 +81,6 @@ module.exports = function( grunt ){
         },
         "cssmin": {
         	"default": {
-        		"keepSpecialComments": 0,
         		"files": {
 			    	'style/screen.min.css': ['style/screen.css']
 			    }
