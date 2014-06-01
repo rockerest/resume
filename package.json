@@ -1,0 +1,18 @@
+{
+  "name": "resume",
+  "repository": "https://github.com/rockerest/resume",
+  "homepage": "http://resume.thomasrandolph.info/",
+  "bugs": "https://github.com/rockerest/resume/issues",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-text-replace": "^0.3.11",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-bower-task": "^0.3.4",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.9.0"
+  }
+}
