@@ -3,7 +3,7 @@ requirejs.config({
     "paths":{
         "lib":          "../../vendor",
 
-        "jquery":       ["//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min", "../../vendor/jquery/jquery.min"],
+        "jquery":       ["//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min", "../../vendor/jquery/jquery"],
         "sammy":        "../../vendor/sammy/lib/sammy",
         "underscore":   "../../vendor/underscore/underscore",
         "moment":       "../../vendor/moment/moment",
