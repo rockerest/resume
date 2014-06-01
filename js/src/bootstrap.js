@@ -6,9 +6,9 @@ requirejs.config({
         "jquery":       ["//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min", "../../vendor/jquery/jquery.min"],
         "sammy":        "../../vendor/sammy/lib/sammy",
         "underscore":   "../../vendor/underscore/underscore",
-        "moment":       "../../vendor/moment/min/moment.min",
+        "moment":       "../../vendor/moment/moment",
         "cookies":      "../../vendor/cookies/src/cookies.min",
-        "intro":        "../../vendor/intro/minified/intro.min"
+        "intro":        "../../vendor/intro/intro"
     },
     "shim":{
         "sammy":{
